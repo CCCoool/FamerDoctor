@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>应急信息</title>
+  <link rel="stylesheet" type="text/css" href="css/common.css"/>
+  <link rel="stylesheet" type="text/css" href="css/emerInfo.css"/>
+  <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+  
+  <script type="text/javascript" src="js/emerInfo.js"></script>
+
+</head>
+<body>
+   <!-- 导航栏 -->
+   <div class="header">
+      <div class="user_nav">
+         <div class="w">
+           <span>欢迎来到农博士</span>
+           <ul>
+              <li><a href="login.html">登录</a></li>
+              <li>|</li>
+              <li><a href="register.html">注册</a></li>
+              <li>|</li>
+              <li><a href="vipCenter.html">我的订单</a></li>
+           </ul>
+         </div>
+      </div>
+      <div class="logo_line">
+         <div class="w">
+            <div class="mid_logo">
+                <a href="javascript:;" class="logo">农博士</a>
+                <p><i>|</i> 引领“<em><b>绿色、健康、休闲</b></em> ”食品潮流</p>
+            </div>
+            <div class="mid_search">
+                <input type="text" placeholder ="">
+                <button>搜索</button>
+            </div>
+            <div class="mid_shoppingcar">
+                <a href="car.html"><i><img src="img/购物车-2.png" alt=""></i><p>购物车(2)</p></a>
+            </div>
+
+         </div>
+      </div>
+      <div class="nav-wrap">
+         <div class="w">
+          <!--导航条-->
+             <ul class="clearfix">
+             	<li><a href="index.html"><i class="home_ico"></i>首页</a></li>
+             	<li> <a href="information_center.html">资讯中心</a></li>
+             	<li><a href="mall.html">产品商城</a></li>
+             	<li><a href="emerInfo.html">应急信息</a></li>
+             	<li><a href="education_services.html">教育服务</a></li>
+             	<li><a href="vipCenter.html">会员中心</a></li>
+             	<li class="nav-last"><a href="about_us_platform.html">关于我们</a></li>
+             </ul>
+          <!--隐藏下拉菜单-->
+             <div id="box-1" class="hidden-box hidden-loc-zxzx">
+                  <ul>
+                      <li><a href="info_company_news.html">公司新闻</a></li>
+                      <li><a href="info_industry_trends.html">行业动态</a></li>
+                      <li><a href="info_policy_notice.html">政策公告</a></li>
+                      <li><a href="info_grow_technology">种植技术</a></li>
+                  </ul>
+             </div>
+             <div id="box-3" class="hidden-box hidden-loc-yjxx">
+                  <ul>
+                      <li><a href="emerInfo.html">气象警报信息</a></li>
+                      <li><a href="emergency_information.html">病虫信息</a></li>
+                  </ul>
+             </div>
+             <div id="box-4" class="hidden-box hidden-loc-jyfw">
+                  <ul>
+                      <li><a href="education_services.html">图文文章</a></li>
+                      <li><a href="min_videos.html">微视频</a></li>
+                  </ul>
+             </div>
+             <div id="box-5" class="hidden-box hidden-loc-hyzx">
+                  <ul>
+                      <li><a href="vipCenter.html">会员介绍</a></li>
+                      <li><a href="vipCenter.html">个人信息</a></li>
+                      <li><a href="vipCenter.html">收货地址</a></li>
+                      <li><a href="vipCenter.html">我的订单</a></li>
+                  </ul>
+             </div>
+             <div id="box-6" class="hidden-box hidden-loc-gywm">
+                  <ul>
+                      <li><a href="about_us_platform.html">平台介绍</a></li>
+                      <li><a href="connect_us.html">联系我们</a></li>
+                  </ul>
+             </div>            
+         </div>
+      </div>
+   </div>
+  
+
+
+  <!-- 应急信息page -->
+  <div class="emerInfo_box">
+  <!-- 当前位置 -->
+    <div class="w emerInfo_path">
+      <span>当前位置：<a href="index.html">首页</a> ><a href="emerInfo.html">应急信息</a></span>
+    </div>
+    <!--content头部开始-->
+     <div class="container">
+        <div class="information_nav">
+            <!--select_location开始-->
+            <div class="select_location">
+                <dl>
+                    <dt>地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;方&nbsp;:</dt>
+                    <dd>
+                        <ul>
+                            <li>北京</li>
+                            <li>北京er</li>
+                            <li>北re京</li>
+                            <li>北京</li>
+                            <li>北r京</li>
+                            <li>北re京</li>
+                            <li>北京</li>
+                            <li>北w京</li>
+                            <li>北rw京</li>
+                            <li>北rw京</li>
+                            <li>北w京</li>
+                            <li>北京</li>
+                            <li>北京</li>
+                            <li>北京</li>
+                            <li>北京</li>
+                            <li>北京</li>
+                            <li>北京</li>
+                        </ul>
+                    </dd>
+                </dl>
+            </div>
+            <!--select_location结束-->
+            <!--select_time开始-->
+            <div class="select_time">
+                <dl>
+                    <dt>时&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;间&nbsp;:</dt>
+                    <dd>
+                        <input type="text" value="2017-02-01" style="background: url(img/日历.png) 107px 5px no-repeat;" onclick="laydate()">
+                        <span>-</span>
+                        <input type="text" value="2017-02-02" style="background: url(img/日历.png) 107px 5px no-repeat;" onclick="laydate()">
+                    </dd>
+                </dl>
+            </div>
+            <!--select_time结束-->
+
+        </div>
+
+   </div>
+   <!--<!--content头部结束-->
+    
+  <!-- 应急信息页主要内容 -->
+    <div class="w emerInfo_content">
+  <!-- 天气模块 -->
+      <div class="emerInfo_weather">
+  <!-- 今日天气 -->
+      	<iframe name="weather_inc" src="emerWeather.html" width="384px" height="680" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>  
+      </div>
+  
+  	
+  <!-- 信息模块 -->
+      <div class="emerInfo_news_list">
+        <div class="news_list_body">
+        <ul class="news_list_content">
+          <li><span>2017年3月16日15:48:08</span><a href="#">这是新闻标题</a></li>
+          <li><span>2017年3月16日15:48:08</span><a href="#">这是新闻标题</a></li>
+          <li><span>2017年3月16日15:48:08</span><a href="#">这是新闻标题</a></li>
+          <li><span>2017年3月16日15:48:08</span><a href="#">这是新闻标题</a></li>
+          <li><span>2017年3月16日15:48:08</span><a href="#">这是新闻标题</a></li>
+          <li><span>2017年3月16日15:48:08</span><a href="#">这是新闻标题</a></li>
+          <li><span>2017年3月16日15:48:08</span><a href="#">这是新闻标题</a></li>
+          <li><span>2017年3月16日15:48:08</span><a href="#">这是新闻标题</a></li>
+        </ul> 
+        </div>
+        <div class="news_list_page">
+          <ul class="news_list_page_nav">
+            <li class="prev_page"><img src="img/emerInfo/左尖.png" alt=""></li>
+            <li class="currentPage">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>...</li>
+            <li class="last_page total"><span>629</span></li>
+            <li class="next_page"><img src="img/emerInfo/右尖.png" alt=""></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    <!-- footer -->
+   <div class="clearfix footer">
+      <div class="w">
+          <div class="footer_logo">
+             <a href="javascript:;"><img src="img/logo1.png" alt=""></a>
+             <p>引领 “<em><b>绿色、 健康、 休闲</b></em> ” 食品潮流</p>
+          </div> 
+          <div class="footer_nav">
+            <div class="footer_nav_list">
+              <div class="footer_menu">
+                <ul>
+                  <li><a href="index.html">首页</a></li>
+                  <li><a href="information_center.html">资讯中心</a></li>
+                  <li><a href="mall.html">产品商城</a></li>
+                  <li><a href="emerInfo.html">应急信息</a></li>
+                  <li><a href="education_services.html">教育服务</a></li>
+                  <li><a href="vipCenter.html">会员中心</a></li>
+                  <li><a href="connect_us.html">关于我们</a></li>
+                </ul>
+              </div>
+              <p>广州农博士责任有限公司&nbsp;&nbsp;&nbsp;技术支持：广州酷云科技有限公司&nbsp;&nbsp;&nbsp;联系电话:020-123456&nbsp;&nbsp;&nbsp;邮箱：12345678@163.com</p>
+            </div>
+          </div>
+      </div>
+
+   </div>
+	
+</body>
+</html>

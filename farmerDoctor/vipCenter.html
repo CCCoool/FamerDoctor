@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>会员中心</title>
+	<link rel="stylesheet" type="text/css" href="css/common.css"/>
+	<link rel="stylesheet" href="css/vipCenter.css" />
+  <script src="js/jquery-2.1.1.min.js"></script>
+  <script src="js/index.js"></script>
+  <script>
+   //导航栏下拉菜单
+         $(document).ready(function () {
+        //导航栏下拉菜单
+          var num;
+          $(".nav-wrap>.w>ul>li").hover(function(){
+          /*下拉框出现*/
+             num = $(this).index();
+             $('#box-'+num).slideDown(300);
+          },function(){
+            /*下拉框消失*/
+             $('#box-'+num).hide();
+            });
+          $(".hidden-box").hover(function(){
+            $(this).show();
+          },function(){
+            $(this).slideUp(200);
+          });
+       })
+  //切换选项卡改变样式和当前位置提示
+ 	$(document).ready(function(){
+		$(".container-left-bottom li a").click(function(){
+			$(".container-top span").text($(this).text());//当前位置提示
+			
+			$(this).css("color",'#167A58');
+			$(this).next().css('visibility','visible');
+			$(this).parent().siblings().find("span").css('visibility','hidden');
+			$(this).parent().siblings().find("a").css('color','#343434');
+		})
+	})
+ //iframe自适应子页面高度
+	$(function(){
+		$("iframe").load(function () {
+		    var mainheight = $(this).contents().find("html").height() + 15;
+		    var footerHeiht=mainheight+300;
+		    $(this).height(mainheight);
+		    //让页脚一直在最低端
+		    $(".footer").css('position','absolute');
+			$(".footer").css('top',footerHeiht);
+		})
+	})
+  </script>
+</head>
+<body style="min-width: 1280px;">
+      <!-- 导航栏 -->
+   <div class="header">
+      <div class="user_nav">
+         <div class="w">
+           <span>欢迎来到农博士</span>
+           <ul>
+              <li><a href="login.html">登录</a></li>
+              <li>|</li>
+              <li><a href="register.html">注册</a></li>
+              <li>|</li>
+              <li><a href="vipCenter.html">我的订单</a></li>
+           </ul>
+         </div>
+      </div>
+      <div class="logo_line">
+         <div class="w">
+            <div class="mid_logo">
+                <a href="javascript:;" class="logo">农博士</a>
+                <p><i>|</i> 引领“<em><b>绿色、健康、休闲</b></em> ”食品潮流</p>
+            </div>
+            <div class="mid_search">
+                <input type="text" placeholder ="">
+                <button>搜索</button>
+            </div>
+            <div class="mid_shoppingcar">
+                <a href="car.html"><i><img src="img/购物车-2.png" alt=""></i><p>购物车(2)</p></a>
+            </div>
+
+         </div>
+      </div>
+      <div class="nav-wrap">
+         <div class="w">
+          <!--导航条-->
+             <ul class="clearfix">
+             	<li><a href="index.html"><i class="home_ico"></i>首页</a></li>
+             	<li> <a href="information_center.html">资讯中心</a></li>
+             	<li><a href="mall.html">产品商城</a></li>
+             	<li><a href="emerInfo.html">应急信息</a></li>
+             	<li><a href="education_services.html">教育服务</a></li>
+             	<li><a href="vipCenter.html">会员中心</a></li>
+             	<li class="nav-last"><a href="about_us_platform.html">关于我们</a></li>
+             </ul>
+          <!--隐藏下拉菜单-->
+             <div id="box-1" class="hidden-box hidden-loc-zxzx">
+                  <ul>
+                      <li><a href="info_company_news.html">公司新闻</a></li>
+                      <li><a href="info_industry_trends.html">行业动态</a></li>
+                      <li><a href="info_policy_notice.html">政策公告</a></li>
+                      <li><a href="info_grow_technology">种植技术</a></li>
+                  </ul>
+             </div>
+             <div id="box-3" class="hidden-box hidden-loc-yjxx">
+                  <ul>
+                      <li><a href="emerInfo.html">气象警报信息</a></li>
+                      <li><a href="emergency_information.html">病虫信息</a></li>
+                  </ul>
+             </div>
+             <div id="box-4" class="hidden-box hidden-loc-jyfw">
+                  <ul>
+                      <li><a href="education_services.html">图文文章</a></li>
+                      <li><a href="min_videos.html">微视频</a></li>
+                  </ul>
+             </div>
+             <div id="box-5" class="hidden-box hidden-loc-hyzx">
+                  <ul>
+                      <li><a href="vipCenter.html">会员介绍</a></li>
+                      <li><a href="vipCenter.html">个人信息</a></li>
+                      <li><a href="vipCenter.html">收货地址</a></li>
+                      <li><a href="vipCenter.html">我的订单</a></li>
+                  </ul>
+             </div>
+             <div id="box-6" class="hidden-box hidden-loc-gywm">
+                  <ul>
+                      <li><a href="about_us_platform.html">平台介绍</a></li>
+                      <li><a href="connect_us.html">联系我们</a></li>
+                  </ul>
+             </div>            
+         </div>
+      </div>
+   </div>
+
+
+ <!-- 主页部分 -->
+<div id="main_banner" class="main_banner">
+  	<div class="container">
+	    	<div class="container-top">当前位置：<a href="index.html">首页</a>>会员中心><span>会员介绍</span></div>
+	    	<div class="container-center">
+	    		<div class="container-left">
+		    		<ul class="container-left-top">
+		    			<li>会员中心</li>
+		    		</ul>
+		    		<ul class="container-left-bottom">
+		    			<li><a style="color: #167A58;" href="vipIntroduce.html" target="iframe">会员介绍</a><span style="visibility: visible;"><img src="img/个人中心.png"></span></li>
+		    			<li><a href="vipInfo.html" target="iframe">个人信息</a><span><img src="img/个人中心.png"></span></li>		    		
+		    			<li><a href="vipAddress.html" target="iframe">收获地址</a><span><img src="img/个人中心.png"></span></li>
+		    			<li><a href="vipOrder.html" target="iframe">我的订单</a><span><img src="img/个人中心.png"></span></li>      <!--<div style="clear: both;"></div>	-->		
+		    		</ul>
+		    	</div>
+		    	<div class="container-right">
+		    		<iframe name="iframe"  width="100%" height="100%" scrolling="no" frameborder="0" src="vipIntroduce.html"></iframe>
+			    	
+		    	</div>		    	
+	    	</div>	    	    	
+	    </div>
+</div>
+
+  
+   <!-- footer -->
+   <div class="clearfix footer">
+      <div class="w">
+          <div class="footer_logo">
+             <a href="javascript:;"><img src="img/logo1.png" alt=""></a>
+             <p>引领 “<em><b>绿色、 健康、 休闲</b></em> ” 食品潮流</p>
+          </div> 
+          <div class="footer_nav">
+            <div class="footer_nav_list">
+              <div class="footer_menu">
+                 <ul>
+                  <li><a href="index.html">首页</a></li>
+                  <li><a href="information_center.html">资讯中心</a></li>
+                  <li><a href="mall.html">产品商城</a></li>
+                  <li><a href="emerInfo.html">应急信息</a></li>
+                  <li><a href="education_services.html">教育服务</a></li>
+                  <li><a href="vipCenter.html">会员中心</a></li>
+                  <li><a href="connect_us.html">关于我们</a></li>
+                </ul>
+              </div>
+              <p>广州农博士责任有限公司&nbsp;&nbsp;&nbsp;技术支持：广州酷云科技有限公司&nbsp;&nbsp;&nbsp;联系电话:020-123456&nbsp;&nbsp;&nbsp;邮箱：12345678@163.com</p>
+            </div>
+          </div>
+      </div>
+
+	
+</body>
+</html>
